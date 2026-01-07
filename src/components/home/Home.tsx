@@ -1,5 +1,5 @@
 import ActionButton from "../../utils/ActionButton";
-import HomePageText from "../../assets/images/HomepageText.png";
+import HomePageText from "../../assets/images/HomePageText.png";
 import HomePageGraphic from "../../assets/images/HomePageGraphic.png";
 import { motion } from "framer-motion";
 import { sponsorImages } from "../../utils/sponsorImages";
