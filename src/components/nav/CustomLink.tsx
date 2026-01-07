@@ -16,7 +16,7 @@ const CustomLink = ({ section, children, onClick, activeSection }: Props) => {
         <Link
             to={section}
             onClick={() => onClick(section)}
-            className={`animate hover:text-primarytxt-300 cursor-pointer capitalize ${isActive ? "text-primarytxt-500" : ""}`}>
+            className={`animate hover:text-primarytxt-300 cursor-pointer capitalizey ${isActive ? "text-primarytxt-500" : ""}`}>
             {children}
         </Link>
     );
