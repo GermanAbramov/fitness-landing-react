@@ -21,7 +21,7 @@
 }
 
 :root {
-    --evolve-url: url("../../assets/images/EvolveText.png");
+    --evolve-url: url("/assets/images/EvolveText.png");
 }
 
 html,
