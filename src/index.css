@@ -11,17 +11,23 @@
     --bg-primary: #f97316;
     --bg-secondary: #ffedd5;
     --color-primarybg: oklch(0.71 0.18 24.75);
+    --color-primarybg-light: #fce1e0;
     --color-secondarybg: #ffc132;
     --color-primarytxt-300: #ffa9a4;
     --color-primarytxt-500: #fa6f6a;
     --color-gray-20: #f9fafb;
     --color-browntxt: oklch(0.3 0.12 29.23);
     --color-light-pink: oklch(0.92 0.04 20.93);
-
+    --breakpoint-*: initial;
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 768px;
+    --breakpoint-md: 1060px;
 }
 
 :root {
     --evolve-url: url("/src/assets/images/EvolveText.png");
+    --abstract-waves-url: url("/src/assets/images/AbstractWaves.png");
+    --sparkles-url: url("/src/assets/images/Sparkles.png");
 }
 
 html,
@@ -33,4 +39,23 @@ body,
     overflow-x: hidden;
     font-family: var(--font-dm-sans);
     scroll-behavior: smooth;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    color: var(--color-secondarybg) !important;
+}
+
+#ourclasses .swiper {
+    padding-bottom: 50px;
+}
+
+@media (max-width: 1124px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
 }

@@ -3,6 +3,9 @@ import HomePageText from "../../assets/images/HomePageText.png";
 import HomePageGraphic from "../../assets/images/HomePageGraphic.png";
 import { motion } from "framer-motion";
 import { sponsorImages } from "../../utils/sponsorImages";
+import { baseMotion, slideLeft, slideRight, slideUp, withDelay } from "../../utils/motionPresets";
+
+
 
 const Home = () => {
     return (
@@ -10,14 +13,9 @@ const Home = () => {
             <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6 text-browntxt">
                 <div className="z-10 mt-32 md:basis-3/5">
                     <motion.div className="md:-mt-20"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{ duration: 0.5 }}
-                        variants={{
-                            hidden: { opacity: 0, x: -50 },
-                            visible: { opacity: 1, x: 0 },
-                        }}
+                        {...baseMotion}
+                        transition={{ duration: 0.7 }}
+                        variants={slideLeft}
                     >
                         <div className="relative">
                             <div className="before:absolute before:-top-20 before:-left-20 md:before:content-(--evolve-url) before:z-[-1]">
@@ -32,14 +30,9 @@ const Home = () => {
                         </p>
                     </motion.div>
                     <motion.div className="mt-8 flex items-center justify-center md:justify-start gap-8"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                        variants={{
-                            hidden: { opacity: 0, x: -50 },
-                            visible: { opacity: 1, x: 0 },
-                        }}
+                        {...baseMotion}
+                        transition={{ delay: 0.2, duration: 0.7 }}
+                        variants={slideLeft}
                     >
                         <ActionButton to="contactus" variant="link">Join now</ActionButton>
                         <ActionButton className="animate rounded-md bg-primarybg px-10 py-2 hover:bg-secondarybg cursor-pointer hover:text-white"
@@ -51,14 +44,9 @@ const Home = () => {
                     </motion.div>
                 </div>
                 <motion.div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
+                    {...baseMotion}
                     transition={{ duration: 0.5 }}
-                    variants={{
-                        hidden: { opacity: 0, x: 50 },
-                        visible: { opacity: 1, x: 0 },
-                    }}
+                    variants={slideRight}
                 >
                     <img className="w-200px" src={HomePageGraphic} alt="" />
                 </motion.div>
@@ -69,10 +57,9 @@ const Home = () => {
                         <motion.div
                             key={index}
                             className=""
-                            initial={{ opacity: 0, y: -50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.5 }}
-                            transition={{ delay: index * 0.2, duration: 0.5 }}
+                            {...baseMotion}
+                            variants={slideUp}
+                            transition={withDelay(index, 0.2, 0.7)}
                         >
                             <img src={image.src} alt={image.alt} />
                         </motion.div>
