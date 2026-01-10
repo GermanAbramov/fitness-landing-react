@@ -11,10 +11,12 @@
     --bg-primary: #f97316;
     --bg-secondary: #ffedd5;
     --color-primarybg: oklch(0.71 0.18 24.75);
+    --color-primarybg-pink: #ffa7a2;
     --color-primarybg-light: #fce1e0;
     --color-secondarybg: #ffc132;
     --color-primarytxt-300: #ffa9a4;
     --color-primarytxt-500: #fa6f6a;
+
     --color-gray-20: #f9fafb;
     --color-browntxt: oklch(0.3 0.12 29.23);
     --color-light-pink: oklch(0.92 0.04 20.93);
